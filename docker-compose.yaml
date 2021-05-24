@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  generator:
+    build:
+        context: .
+    command:
+      - /usr/local/bin/generator
+      - --timer=10
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "9999:9999"
