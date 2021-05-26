@@ -5,7 +5,8 @@ services:
     build:
         context: .
     command:
-      - /usr/local/bin/generator
+      - /usr/local/bin/generator 
+      - data
       - --timer=10
     volumes:
       - ./data:/app/data
