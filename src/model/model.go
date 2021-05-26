@@ -46,3 +46,13 @@ type Transaction struct {
 	RelatedCustodianID            int32 `json:"related_custodian_id,omitempty"`
 	RelatedCustodianTransactionID int32 `json:"related_custodian_transaction_id,omitempty"`
 }
+
+type User struct {
+	ID         int32   `json:"id"`
+	Custodians []int32 `json:"custodians"`
+}
+
+func NewUser(id int32) *User {
+	u := &User{id, []int32{}}
+	return u
+}
