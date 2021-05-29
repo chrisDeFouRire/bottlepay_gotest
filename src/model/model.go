@@ -55,6 +55,11 @@ func SortAssetsByCode(a []*Asset) {
 	})
 }
 
+type AssetExchange struct {
+	From *Asset
+	To   *Asset
+}
+
 type Transaction struct {
 	ID        int32           `json:"id"`
 	Asset     string          `json:"asset"`
@@ -63,6 +68,15 @@ type Transaction struct {
 
 	RelatedCustodianID            int32 `json:"related_custodian_id,omitempty"`
 	RelatedCustodianTransactionID int32 `json:"related_custodian_transaction_id,omitempty"`
+}
+
+// TransactionsByID returns transactions indexed by ID for faster lookup
+func IndexTransactionsByID(txs []*Transaction) map[int32]*Transaction {
+	m := make(map[int32]*Transaction, len(txs))
+	for _, tx := range txs {
+		m[tx.ID] = tx
+	}
+	return m
 }
 
 // GetTransactionType returns the Transaction Type
@@ -97,6 +111,25 @@ func (c *Custodian) FilterTransactionsByType(txtype TransactionType) []*Transact
 		}
 	}
 	return txl
+}
+
+// GetAssetExchanges returns the internal asset exchanges
+func (c *Custodian) GetAssetExchanges() []AssetExchange {
+	txs := c.FilterTransactionsByType(InternalAssetExchange)
+	txsmap := IndexTransactionsByID(txs)
+
+	var ex []AssetExchange
+
+	for _, tx := range txs {
+		if tx.Direction == "OUT" { // start with the OUT tx
+			relatedTx := txsmap[tx.RelatedCustodianTransactionID]
+			ex = append(ex, AssetExchange{
+				From: &Asset{Code: tx.Asset, Balance: tx.Amount},
+				To:   &Asset{Code: relatedTx.Asset, Balance: relatedTx.Amount},
+			})
+		}
+	}
+	return ex
 }
 
 type User struct {

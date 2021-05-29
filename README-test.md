@@ -24,7 +24,7 @@ In our FakeUserStore, User 1 has linked Custodians 1,2,3 and 4.
 
 I've added unit tests for the UserStore in `store/userStore_test.go`.
 
-## Add a CustodianSvc to collectd the custodians data from HTTP requests
+## Add a CustodianSvc to collect the custodians data from HTTP requests
 
 To perform HTTP requests to the mock Wallet/Exchange service, I'm using a CustodianSvc service. It can fetch any number of custodians by IDs.
 
