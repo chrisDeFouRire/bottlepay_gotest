@@ -1,12 +1,23 @@
 package model
 
 import (
+	"sort"
+
 	"github.com/shopspring/decimal"
 )
 
 const (
 	DirectionIn  = "IN"
 	DirectionOut = "OUT"
+)
+
+type TransactionType int
+
+const (
+	ExternalDeposit TransactionType = iota
+	ExternalWithdrawal
+	ForeignTransfer
+	InternalAssetExchange
 )
 
 type Custodian struct {
@@ -37,6 +48,13 @@ type Asset struct {
 	Balance decimal.Decimal `json:"balance"`
 }
 
+// SortAssetsByCode sorts the Assets array in place by code
+func SortAssetsByCode(a []*Asset) {
+	sort.Slice(a, func(i, j int) bool {
+		return a[i].Code < a[j].Code
+	})
+}
+
 type Transaction struct {
 	ID        int32           `json:"id"`
 	Asset     string          `json:"asset"`
@@ -47,6 +65,40 @@ type Transaction struct {
 	RelatedCustodianTransactionID int32 `json:"related_custodian_transaction_id,omitempty"`
 }
 
+// GetTransactionType returns the Transaction Type
+func (c *Custodian) GetTransactionType(t *Transaction) TransactionType {
+
+	// It's implemented on Custodian instead of Transaction because it needs the CustodianId
+	// to determine if the transaction is internal or not
+	switch {
+	case t.RelatedCustodianID == 0 &&
+		t.RelatedCustodianTransactionID == 0 &&
+		t.Direction == "IN":
+		return ExternalDeposit
+	case t.RelatedCustodianID == 0 &&
+		t.RelatedCustodianTransactionID == 0 &&
+		t.Direction == "OUT":
+		return ExternalWithdrawal
+	case t.RelatedCustodianID != c.ID:
+		return ForeignTransfer
+	case t.RelatedCustodianID == c.ID:
+		return InternalAssetExchange
+	default:
+		panic("Invalid transaction type")
+	}
+}
+
+// FilterTransactionsByType filters transactions by Type
+func (c *Custodian) FilterTransactionsByType(txtype TransactionType) []*Transaction {
+	txl := make([]*Transaction, 0)
+	for _, tx := range c.Transactions {
+		if c.GetTransactionType(tx) == txtype {
+			txl = append(txl, tx)
+		}
+	}
+	return txl
+}
+
 type User struct {
 	ID         int32   `json:"id"`
 	Custodians []int32 `json:"custodians"`
@@ -55,4 +107,50 @@ type User struct {
 func NewUser(id int32) *User {
 	u := &User{id, []int32{}}
 	return u
+}
+
+// AssetList makes adding assets together much easier
+type AssetList struct {
+	assetsMap map[string]*Asset
+}
+
+// NewAssetList creates a new AssetList
+func NewAssetList(assets ...*Asset) *AssetList {
+	res := &AssetList{}
+	res.assetsMap = make(map[string]*Asset)
+
+	for _, a := range assets {
+		res.AddAssetValue(a)
+	}
+	return res
+}
+
+// AddAssetValue adds the value of an Asset to the AssetList
+func (al *AssetList) add(code string, value decimal.Decimal) {
+	if asset, found := al.assetsMap[code]; found {
+		asset.Balance = asset.Balance.Add(value)
+		return
+	}
+	// if not found, create the Asset in our map
+	al.assetsMap[code] = &Asset{Code: code, Balance: value}
+}
+
+// AddAssetValue adds the asset and its value to the AssetList
+func (al *AssetList) AddAssetValue(a *Asset) {
+	al.add(a.Code, a.Balance)
+}
+
+// AddTransaction allows aggregation of transactions into an AssetList
+func (al *AssetList) AddTransaction(tx *Transaction) {
+	al.add(tx.Asset, tx.Amount)
+}
+
+// GetAssets returns the list of assets with total holding, Sorted by Asset Code
+func (al *AssetList) GetAssets() []*Asset {
+	result := make([]*Asset, 0, len(al.assetsMap))
+	for _, a := range al.assetsMap {
+		result = append(result, a)
+	}
+	SortAssetsByCode(result) // Sort by Code, makes testing easier, also prettier
+	return result
 }

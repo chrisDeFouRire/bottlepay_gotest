@@ -32,6 +32,14 @@ The first implementation is not concurrent (each custodian is fetched in order) 
 
 I've added simple integration tests for the CustodianSvc in `service/custodianSvc_test.go`. They require the mock service to be running on localhost:9999 though.
 
+## Enrich the model package
+
+To answer requests, I need filter and aggregation functions. I've chosen to put them in the model package as these functions relate directly to the model.
+
+I've added an AssetList type to make it easier to handle Asset lists when adding Assets or Transactions. I've also added TransactionType's to make it easier to filter transactions.
+
+Also I've added simple unit tests in `model/aggregation_test.go`.
+
 ## Add an HTTP route to aggregate the custodians data 
 
 I first need to identify and authenticate the user before aggregating his data.
