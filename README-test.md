@@ -22,7 +22,15 @@ The UserStore functions has context.Context and errors because any UserStore but
 
 In our FakeUserStore, User 1 has linked Custodians 1,2,3 and 4.
 
-I've added unit tests for the UserStore in `userStore_test.go`.
+I've added unit tests for the UserStore in `store/userStore_test.go`.
+
+## Add a CustodianSvc to collectd the custodians data from HTTP requests
+
+To perform HTTP requests to the mock Wallet/Exchange service, I'm using a CustodianSvc service. It can fetch any number of custodians by IDs.
+
+The first implementation is not concurrent (each custodian is fetched in order) but an alternative implementation could perform the HTTP requests in parallel to reduce latency.
+
+I've added simple integration tests for the CustodianSvc in `service/custodianSvc_test.go`. They require the mock service to be running on localhost:9999 though.
 
 ## Add an HTTP route to aggregate the custodians data 
 
