@@ -38,13 +38,31 @@ To answer requests, I need filter and aggregation functions. I've chosen to put 
 
 I've added an AssetList type to make it easier to handle Asset lists when adding Assets or Transactions. I've also added TransactionType's to make it easier to filter transactions.
 
-Also I've added simple unit tests in `model/aggregation_test.go`.
+I've also added AssetExchanges to track exchanges of asset in the same custodian.
 
-## Add an HTTP route to aggregate the custodians data 
+Finally I've added simple unit tests in `model/aggregation_test.go`.
 
-I first need to identify and authenticate the user before aggregating his data.
+## Secure HTTP routes
 
-For this, I'll rely of JWT: I'll assume there's an authentication service somewhere and it will provide the user with a JWT token once authenticated. This kind of service would receive credentials (user/password, Google or Apple token) from the mobile app, verify them and return a JWT token to the app. This token would then allow the mobile app to call the Tracker service.
+I would normally add authentication on such a service. A JWT bearer token feels appropriate in this case.
 
-This way the Tracker service can check the user's identity against the JWT token in HTTP requests. There's a clean separation of concerns, the tracker service doesn't need any access to user's private data.
+- the mobile app calls a "login" route of an Auth service and receives a JWT token with claims (among them, the ID of the user). Could be AWS Cognito, Auth0 or a custom service
+- the mobile app adds the token to its requests to the tracker service, usually in the `Authentication` HTTP header
+- the tracker service can verify the token (issuer, signature and expiry) to certify it's from the Auth service, then use the JWT claims to get the identity of the user, and check the IDs are the same
 
+I didn't implement this because of the development overhead, and because it would make testing more cumbersome.
+
+## Add an HTTP route to aggregate the custodians holdings 
+
+`GET /user/{id}/holdings`
+
+Now it's just a matter of getting the user from the user store, getting his custodians data, aggregating his holding, and sending the json result.
+
+```
+$ curl -v http://0.0.0.0:9998/user/1/holdings
+[{"code":"BTC","balance":"131.72086218"},{"code":"GBP","balance":"939940.97444372"}]
+```
+
+I've added a 30s timeout to fetch the data from the fake service.
+
+I'd never used chi before, it's nice and powerful!
