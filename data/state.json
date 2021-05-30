@@ -1,0 +1,1474 @@
+[
+	{
+		"id": 1,
+		"assets": [
+			{
+				"code": "BTC",
+				"balance": "31.12874002"
+			}
+		],
+		"transactions": [
+			{
+				"id": 1,
+				"asset": "BTC",
+				"amount": "1.9000000019",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 4
+			},
+			{
+				"id": 2,
+				"asset": "BTC",
+				"amount": "1.5000000015",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 2
+			},
+			{
+				"id": 3,
+				"asset": "BTC",
+				"amount": "0.1071200001",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 6
+			},
+			{
+				"id": 4,
+				"asset": "BTC",
+				"amount": "1.0677832011",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 3
+			},
+			{
+				"id": 5,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 7
+			},
+			{
+				"id": 6,
+				"asset": "BTC",
+				"amount": "0.4241952004",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 9
+			},
+			{
+				"id": 7,
+				"asset": "BTC",
+				"amount": "1.7468990976",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 13
+			},
+			{
+				"id": 8,
+				"asset": "BTC",
+				"amount": "1.081043111",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 7
+			},
+			{
+				"id": 9,
+				"asset": "BTC",
+				"amount": "1.2839708364",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 14
+			},
+			{
+				"id": 10,
+				"asset": "BTC",
+				"amount": "8.3701527184",
+				"direction": "IN"
+			},
+			{
+				"id": 11,
+				"asset": "BTC",
+				"amount": "3.6828671964",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 10
+			},
+			{
+				"id": 12,
+				"asset": "BTC",
+				"amount": "1.2560515488",
+				"direction": "OUT"
+			},
+			{
+				"id": 13,
+				"asset": "BTC",
+				"amount": "2.3111348496",
+				"direction": "IN"
+			},
+			{
+				"id": 14,
+				"asset": "BTC",
+				"amount": "5.3618328512",
+				"direction": "IN"
+			},
+			{
+				"id": 15,
+				"asset": "BTC",
+				"amount": "3.7599852867",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 16
+			},
+			{
+				"id": 16,
+				"asset": "BTC",
+				"amount": "2.9372120352",
+				"direction": "IN"
+			},
+			{
+				"id": 17,
+				"asset": "BTC",
+				"amount": "7.6661234136",
+				"direction": "IN"
+			},
+			{
+				"id": 18,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 31
+			},
+			{
+				"id": 19,
+				"asset": "BTC",
+				"amount": "2.6064819603",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 26
+			},
+			{
+				"id": 20,
+				"asset": "BTC",
+				"amount": "2.635442871",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 25
+			},
+			{
+				"id": 21,
+				"asset": "BTC",
+				"amount": "2.371898584",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 33
+			},
+			{
+				"id": 22,
+				"asset": "BTC",
+				"amount": "0.2134708726",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 38
+			},
+			{
+				"id": 23,
+				"asset": "BTC",
+				"amount": "2.7473701307",
+				"direction": "OUT"
+			},
+			{
+				"id": 24,
+				"asset": "BTC",
+				"amount": "1.6547621634",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 43
+			},
+			{
+				"id": 25,
+				"asset": "BTC",
+				"amount": "0.501944523",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 38
+			},
+			{
+				"id": 26,
+				"asset": "BTC",
+				"amount": "0.9737723748",
+				"direction": "OUT"
+			},
+			{
+				"id": 27,
+				"asset": "BTC",
+				"amount": "2.5934804257",
+				"direction": "OUT"
+			},
+			{
+				"id": 28,
+				"asset": "BTC",
+				"amount": "6.0778976544",
+				"direction": "IN"
+			},
+			{
+				"id": 29,
+				"asset": "BTC",
+				"amount": "2.0614202873",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 41
+			},
+			{
+				"id": 30,
+				"asset": "BTC",
+				"amount": "1.7868430624",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 50
+			},
+			{
+				"id": 31,
+				"asset": "BTC",
+				"amount": "2.5887909936",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 47
+			},
+			{
+				"id": 32,
+				"asset": "BTC",
+				"amount": "15.1591666968",
+				"direction": "IN"
+			},
+			{
+				"id": 33,
+				"asset": "BTC",
+				"amount": "6.1563060313",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 48
+			},
+			{
+				"id": 34,
+				"asset": "BTC",
+				"amount": "1.2022903544",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 45
+			},
+			{
+				"id": 35,
+				"asset": "BTC",
+				"amount": "2.0198477957",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 53
+			},
+			{
+				"id": 36,
+				"asset": "BTC",
+				"amount": "4.2936193136",
+				"direction": "IN"
+			},
+			{
+				"id": 37,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "IN"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"assets": [
+			{
+				"code": "BTC",
+				"balance": "40.92631191"
+			},
+			{
+				"code": "GBP",
+				"balance": "199853.48990406"
+			}
+		],
+		"transactions": [
+			{
+				"id": 1,
+				"asset": "GBP",
+				"amount": "8000.0008",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 2
+			},
+			{
+				"id": 2,
+				"asset": "BTC",
+				"amount": "0.20000002",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 1
+			},
+			{
+				"id": 3,
+				"asset": "GBP",
+				"amount": "9200.00092",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 4
+			},
+			{
+				"id": 4,
+				"asset": "BTC",
+				"amount": "0.230000023",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 3
+			},
+			{
+				"id": 5,
+				"asset": "BTC",
+				"amount": "0.404448549",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 9
+			},
+			{
+				"id": 6,
+				"asset": "GBP",
+				"amount": "10764.0010764",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 10
+			},
+			{
+				"id": 7,
+				"asset": "BTC",
+				"amount": "1.081043111",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 8
+			},
+			{
+				"id": 8,
+				"asset": "GBP",
+				"amount": "12246.121224612",
+				"direction": "OUT"
+			},
+			{
+				"id": 9,
+				"asset": "BTC",
+				"amount": "1.191549171",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 15
+			},
+			{
+				"id": 10,
+				"asset": "BTC",
+				"amount": "3.6828671964",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 11
+			},
+			{
+				"id": 11,
+				"asset": "BTC",
+				"amount": "10.9491754024",
+				"direction": "IN"
+			},
+			{
+				"id": 12,
+				"asset": "GBP",
+				"amount": "9566.3817566384",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 13
+			},
+			{
+				"id": 13,
+				"asset": "BTC",
+				"amount": "0.23915954391596",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 12
+			},
+			{
+				"id": 14,
+				"asset": "GBP",
+				"amount": "10044.70084447",
+				"direction": "IN"
+			},
+			{
+				"id": 15,
+				"asset": "GBP",
+				"amount": "10848.2769120276",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 17
+			},
+			{
+				"id": 16,
+				"asset": "BTC",
+				"amount": "0.7678543404",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 19
+			},
+			{
+				"id": 17,
+				"asset": "BTC",
+				"amount": "1.5754644688",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 20
+			},
+			{
+				"id": 18,
+				"asset": "GBP",
+				"amount": "25998.5196842126",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 21
+			},
+			{
+				"id": 19,
+				"asset": "BTC",
+				"amount": "0.8125132473",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 23
+			},
+			{
+				"id": 20,
+				"asset": "BTC",
+				"amount": "4.6265955702",
+				"direction": "OUT"
+			},
+			{
+				"id": 21,
+				"asset": "GBP",
+				"amount": "11312.76717585",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 22
+			},
+			{
+				"id": 22,
+				"asset": "BTC",
+				"amount": "0.28281917939625",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 21
+			},
+			{
+				"id": 23,
+				"asset": "GBP",
+				"amount": "7692.681679578",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 24
+			},
+			{
+				"id": 24,
+				"asset": "BTC",
+				"amount": "0.19231704198945",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 23
+			},
+			{
+				"id": 25,
+				"asset": "BTC",
+				"amount": "2.5370189581",
+				"direction": "OUT"
+			},
+			{
+				"id": 26,
+				"asset": "BTC",
+				"amount": "2.6064819603",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 19
+			},
+			{
+				"id": 27,
+				"asset": "GBP",
+				"amount": "16801.857348297",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 26
+			},
+			{
+				"id": 28,
+				"asset": "GBP",
+				"amount": "11714.3770130992",
+				"direction": "IN"
+			},
+			{
+				"id": 29,
+				"asset": "BTC",
+				"amount": "0.4626654342",
+				"direction": "OUT"
+			},
+			{
+				"id": 30,
+				"asset": "BTC",
+				"amount": "0.7349457815",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 29
+			},
+			{
+				"id": 31,
+				"asset": "BTC",
+				"amount": "2.1064996854",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 34
+			},
+			{
+				"id": 32,
+				"asset": "BTC",
+				"amount": "2.7383660982",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 34
+			},
+			{
+				"id": 33,
+				"asset": "GBP",
+				"amount": "64546.2173421772",
+				"direction": "IN"
+			},
+			{
+				"id": 34,
+				"asset": "BTC",
+				"amount": "2.1633676623",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 41
+			},
+			{
+				"id": 35,
+				"asset": "BTC",
+				"amount": "1.581877606",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 42
+			},
+			{
+				"id": 36,
+				"asset": "GBP",
+				"amount": "6825.6988897604",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 40
+			},
+			{
+				"id": 37,
+				"asset": "GBP",
+				"amount": "19201.888872296",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 44
+			},
+			{
+				"id": 38,
+				"asset": "BTC",
+				"amount": "0.501944523",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 25
+			},
+			{
+				"id": 39,
+				"asset": "BTC",
+				"amount": "9.583149176",
+				"direction": "IN"
+			},
+			{
+				"id": 40,
+				"asset": "GBP",
+				"amount": "5265.0911534763",
+				"direction": "OUT"
+			},
+			{
+				"id": 41,
+				"asset": "BTC",
+				"amount": "2.0614202873",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 29
+			},
+			{
+				"id": 42,
+				"asset": "BTC",
+				"amount": "1.3802860731",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 49
+			},
+			{
+				"id": 43,
+				"asset": "GBP",
+				"amount": "25535.6920943595",
+				"direction": "OUT"
+			},
+			{
+				"id": 44,
+				"asset": "GBP",
+				"amount": "86821.353120822",
+				"direction": "IN"
+			},
+			{
+				"id": 45,
+				"asset": "GBP",
+				"amount": "27782.8329986628",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 42
+			},
+			{
+				"id": 46,
+				"asset": "GBP",
+				"amount": "11155.4503797624",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 51
+			},
+			{
+				"id": 47,
+				"asset": "BTC",
+				"amount": "2.5887909936",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 31
+			},
+			{
+				"id": 48,
+				"asset": "BTC",
+				"amount": "6.1563060313",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 33
+			},
+			{
+				"id": 49,
+				"asset": "GBP",
+				"amount": "15042.7357992303",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 50
+			},
+			{
+				"id": 50,
+				"asset": "BTC",
+				"amount": "0.3760683949807575",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 49
+			}
+		]
+	},
+	{
+		"id": 3,
+		"assets": [
+			{
+				"code": "BTC",
+				"balance": "13.40737117"
+			},
+			{
+				"code": "GBP",
+				"balance": "211941.40771291"
+			}
+		],
+		"transactions": [
+			{
+				"id": 1,
+				"asset": "GBP",
+				"amount": "11000.0011",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 3
+			},
+			{
+				"id": 2,
+				"asset": "BTC",
+				"amount": "1.5000000015",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 2
+			},
+			{
+				"id": 3,
+				"asset": "BTC",
+				"amount": "1.0677832011",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 4
+			},
+			{
+				"id": 4,
+				"asset": "BTC",
+				"amount": "0.5740669926",
+				"direction": "OUT"
+			},
+			{
+				"id": 5,
+				"asset": "GBP",
+				"amount": "12250.00078148",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 8
+			},
+			{
+				"id": 6,
+				"asset": "BTC",
+				"amount": "1.2591202708",
+				"direction": "OUT"
+			},
+			{
+				"id": 7,
+				"asset": "GBP",
+				"amount": "14175.0013554072",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 8
+			},
+			{
+				"id": 8,
+				"asset": "BTC",
+				"amount": "0.35437503388518",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 7
+			},
+			{
+				"id": 9,
+				"asset": "BTC",
+				"amount": "0.404448549",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 5
+			},
+			{
+				"id": 10,
+				"asset": "BTC",
+				"amount": "1.8442853832",
+				"direction": "IN"
+			},
+			{
+				"id": 11,
+				"asset": "GBP",
+				"amount": "5224.5004995642",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 16
+			},
+			{
+				"id": 12,
+				"asset": "BTC",
+				"amount": "0.2858642343",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 13
+			},
+			{
+				"id": 13,
+				"asset": "GBP",
+				"amount": "11434.569372",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 12
+			},
+			{
+				"id": 14,
+				"asset": "BTC",
+				"amount": "5.9154838912",
+				"direction": "IN"
+			},
+			{
+				"id": 15,
+				"asset": "GBP",
+				"amount": "5597.1046319106",
+				"direction": "OUT"
+			},
+			{
+				"id": 16,
+				"asset": "BTC",
+				"amount": "3.7599852867",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 15
+			},
+			{
+				"id": 17,
+				"asset": "BTC",
+				"amount": "0.7567365104",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 22
+			},
+			{
+				"id": 18,
+				"asset": "BTC",
+				"amount": "2.9058682",
+				"direction": "OUT"
+			},
+			{
+				"id": 19,
+				"asset": "GBP",
+				"amount": "5261.278353996",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 20
+			},
+			{
+				"id": 20,
+				"asset": "BTC",
+				"amount": "0.1315319588499",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 19
+			},
+			{
+				"id": 21,
+				"asset": "BTC",
+				"amount": "1.6926074011",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 28
+			},
+			{
+				"id": 22,
+				"asset": "GBP",
+				"amount": "7418.402479134",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 23
+			},
+			{
+				"id": 23,
+				"asset": "BTC",
+				"amount": "0.18546006197835",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 22
+			},
+			{
+				"id": 24,
+				"asset": "GBP",
+				"amount": "45004.975040082",
+				"direction": "IN"
+			},
+			{
+				"id": 25,
+				"asset": "BTC",
+				"amount": "2.635442871",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 20
+			},
+			{
+				"id": 26,
+				"asset": "GBP",
+				"amount": "16801.857348297",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 27
+			},
+			{
+				"id": 27,
+				"asset": "GBP",
+				"amount": "2064.228188505",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 32
+			},
+			{
+				"id": 28,
+				"asset": "BTC",
+				"amount": "1.8167199094",
+				"direction": "OUT"
+			},
+			{
+				"id": 29,
+				"asset": "BTC",
+				"amount": "0.7349457815",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 30
+			},
+			{
+				"id": 30,
+				"asset": "BTC",
+				"amount": "0.833086968",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 35
+			},
+			{
+				"id": 31,
+				"asset": "BTC",
+				"amount": "0.1379334182",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 38
+			},
+			{
+				"id": 32,
+				"asset": "GBP",
+				"amount": "11126.1899360414",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 33
+			},
+			{
+				"id": 33,
+				"asset": "BTC",
+				"amount": "0.278154748401035",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 32
+			},
+			{
+				"id": 34,
+				"asset": "BTC",
+				"amount": "2.7383660982",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 32
+			},
+			{
+				"id": 35,
+				"asset": "BTC",
+				"amount": "0.4989911556",
+				"direction": "IN"
+			},
+			{
+				"id": 36,
+				"asset": "BTC",
+				"amount": "1.4271147055",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 37
+			},
+			{
+				"id": 37,
+				"asset": "GBP",
+				"amount": "57084.58822",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 36
+			},
+			{
+				"id": 38,
+				"asset": "BTC",
+				"amount": "0.2134708726",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 22
+			},
+			{
+				"id": 39,
+				"asset": "GBP",
+				"amount": "23536.892723312",
+				"direction": "IN"
+			},
+			{
+				"id": 40,
+				"asset": "GBP",
+				"amount": "6825.6988897604",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 36
+			},
+			{
+				"id": 41,
+				"asset": "BTC",
+				"amount": "0.9534996366",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 46
+			},
+			{
+				"id": 42,
+				"asset": "GBP",
+				"amount": "27782.8329986628",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 45
+			},
+			{
+				"id": 43,
+				"asset": "BTC",
+				"amount": "0.508545034",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 44
+			},
+			{
+				"id": 44,
+				"asset": "GBP",
+				"amount": "20341.80136",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 43
+			},
+			{
+				"id": 45,
+				"asset": "BTC",
+				"amount": "1.2022903544",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 34
+			}
+		]
+	},
+	{
+		"id": 4,
+		"assets": [
+			{
+				"code": "BTC",
+				"balance": "9.10921833"
+			},
+			{
+				"code": "GBP",
+				"balance": "374868.10327259"
+			}
+		],
+		"transactions": [
+			{
+				"id": 1,
+				"asset": "BTC",
+				"amount": "1.6000000016",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 2
+			},
+			{
+				"id": 2,
+				"asset": "GBP",
+				"amount": "64000.000064",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 1
+			},
+			{
+				"id": 3,
+				"asset": "GBP",
+				"amount": "11000.0011",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 1
+			},
+			{
+				"id": 4,
+				"asset": "BTC",
+				"amount": "1.9000000019",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 1
+			},
+			{
+				"id": 5,
+				"asset": "BTC",
+				"amount": "0.4120000004",
+				"direction": "IN"
+			},
+			{
+				"id": 6,
+				"asset": "BTC",
+				"amount": "0.1071200001",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 3
+			},
+			{
+				"id": 7,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 5
+			},
+			{
+				"id": 8,
+				"asset": "GBP",
+				"amount": "12250.00078148",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 5
+			},
+			{
+				"id": 9,
+				"asset": "BTC",
+				"amount": "0.4241952004",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 6
+			},
+			{
+				"id": 10,
+				"asset": "GBP",
+				"amount": "10764.0010764",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 6
+			},
+			{
+				"id": 11,
+				"asset": "GBP",
+				"amount": "29497.3819480164",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 12
+			},
+			{
+				"id": 12,
+				"asset": "BTC",
+				"amount": "0.73743454870041",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 11
+			},
+			{
+				"id": 13,
+				"asset": "BTC",
+				"amount": "1.7468990976",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 7
+			},
+			{
+				"id": 14,
+				"asset": "BTC",
+				"amount": "1.2839708364",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 9
+			},
+			{
+				"id": 15,
+				"asset": "BTC",
+				"amount": "1.191549171",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 9
+			},
+			{
+				"id": 16,
+				"asset": "GBP",
+				"amount": "5224.5004995642",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 11
+			},
+			{
+				"id": 17,
+				"asset": "GBP",
+				"amount": "10848.2769120276",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 15
+			},
+			{
+				"id": 18,
+				"asset": "GBP",
+				"amount": "25614.3051075984",
+				"direction": "IN"
+			},
+			{
+				"id": 19,
+				"asset": "BTC",
+				"amount": "0.7678543404",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 16
+			},
+			{
+				"id": 20,
+				"asset": "BTC",
+				"amount": "1.5754644688",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 17
+			},
+			{
+				"id": 21,
+				"asset": "GBP",
+				"amount": "25998.5196842126",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 18
+			},
+			{
+				"id": 22,
+				"asset": "BTC",
+				"amount": "0.7567365104",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 17
+			},
+			{
+				"id": 23,
+				"asset": "BTC",
+				"amount": "0.8125132473",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 19
+			},
+			{
+				"id": 24,
+				"asset": "GBP",
+				"amount": "83046.7000198576",
+				"direction": "IN"
+			},
+			{
+				"id": 25,
+				"asset": "GBP",
+				"amount": "2427.5189236574",
+				"direction": "OUT"
+			},
+			{
+				"id": 26,
+				"asset": "GBP",
+				"amount": "31242.1685474704",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 27
+			},
+			{
+				"id": 27,
+				"asset": "BTC",
+				"amount": "0.78105421368676",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 26
+			},
+			{
+				"id": 28,
+				"asset": "BTC",
+				"amount": "1.6926074011",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 21
+			},
+			{
+				"id": 29,
+				"asset": "BTC",
+				"amount": "1.2826887996",
+				"direction": "OUT"
+			},
+			{
+				"id": 30,
+				"asset": "GBP",
+				"amount": "58543.0173704908",
+				"direction": "IN"
+			},
+			{
+				"id": 31,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 18
+			},
+			{
+				"id": 32,
+				"asset": "GBP",
+				"amount": "2064.228188505",
+				"direction": "IN",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 27
+			},
+			{
+				"id": 33,
+				"asset": "BTC",
+				"amount": "2.371898584",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 21
+			},
+			{
+				"id": 34,
+				"asset": "BTC",
+				"amount": "2.1064996854",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 31
+			},
+			{
+				"id": 35,
+				"asset": "BTC",
+				"amount": "0.833086968",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 30
+			},
+			{
+				"id": 36,
+				"asset": "GBP",
+				"amount": "29665.839549896",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 37
+			},
+			{
+				"id": 37,
+				"asset": "BTC",
+				"amount": "0.7416459887474",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 36
+			},
+			{
+				"id": 38,
+				"asset": "BTC",
+				"amount": "0.1379334182",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 31
+			},
+			{
+				"id": 39,
+				"asset": "GBP",
+				"amount": "0",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 40
+			},
+			{
+				"id": 40,
+				"asset": "BTC",
+				"amount": "0",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 39
+			},
+			{
+				"id": 41,
+				"asset": "BTC",
+				"amount": "2.1633676623",
+				"direction": "IN",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 34
+			},
+			{
+				"id": 42,
+				"asset": "BTC",
+				"amount": "1.581877606",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 35
+			},
+			{
+				"id": 43,
+				"asset": "BTC",
+				"amount": "1.6547621634",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 24
+			},
+			{
+				"id": 44,
+				"asset": "GBP",
+				"amount": "19201.888872296",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 37
+			},
+			{
+				"id": 45,
+				"asset": "GBP",
+				"amount": "37539.692745338",
+				"direction": "OUT"
+			},
+			{
+				"id": 46,
+				"asset": "BTC",
+				"amount": "0.9534996366",
+				"direction": "OUT",
+				"related_custodian_id": 3,
+				"related_custodian_transaction_id": 41
+			},
+			{
+				"id": 47,
+				"asset": "BTC",
+				"amount": "2.3901057552",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 48
+			},
+			{
+				"id": 48,
+				"asset": "GBP",
+				"amount": "95604.230208",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 47
+			},
+			{
+				"id": 49,
+				"asset": "BTC",
+				"amount": "1.3802860731",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 42
+			},
+			{
+				"id": 50,
+				"asset": "BTC",
+				"amount": "1.7868430624",
+				"direction": "OUT",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 30
+			},
+			{
+				"id": 51,
+				"asset": "GBP",
+				"amount": "11155.4503797624",
+				"direction": "OUT",
+				"related_custodian_id": 2,
+				"related_custodian_transaction_id": 46
+			},
+			{
+				"id": 52,
+				"asset": "GBP",
+				"amount": "42836.929458288",
+				"direction": "IN"
+			},
+			{
+				"id": 53,
+				"asset": "BTC",
+				"amount": "2.0198477957",
+				"direction": "IN",
+				"related_custodian_id": 1,
+				"related_custodian_transaction_id": 35
+			},
+			{
+				"id": 54,
+				"asset": "BTC",
+				"amount": "0.6840464328",
+				"direction": "OUT"
+			},
+			{
+				"id": 55,
+				"asset": "BTC",
+				"amount": "1.6075091175",
+				"direction": "OUT",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 56
+			},
+			{
+				"id": 56,
+				"asset": "GBP",
+				"amount": "64300.3647",
+				"direction": "IN",
+				"related_custodian_id": 4,
+				"related_custodian_transaction_id": 55
+			}
+		]
+	}
+]

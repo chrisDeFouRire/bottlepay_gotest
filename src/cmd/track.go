@@ -39,13 +39,17 @@ var trackCmd = &cobra.Command{
 		if err != nil {
 			panic("--custodian=URL is required")
 		}
-		svc := service.NewCustodianSvc(url)
+		custSvc := service.NewCustodianSvc(url)
 
 		r := chi.NewRouter()
 		r.Use(middleware.Logger)
 		r.Route("/user/{id}", func(r chi.Router) {
 			r.Use(handleUserCtx(userStore))
-			r.Get("/holdings", handleHoldingsRoute(svc))
+			r.Get("/", handleUserRoute())
+			r.Get("/holdings", handleHoldingsRoute(custSvc))
+			r.Route("/custodian/{custId}", func(r chi.Router) {
+				r.Get("/transactions", handleTransactionsRoute(custSvc))
+			})
 		})
 
 		listenAddr, err := flags.GetString("listen")
@@ -85,6 +89,7 @@ var trackCmd = &cobra.Command{
 	},
 }
 
+// /user/{id} -> id in USERCONTEXT context value
 func handleUserCtx(s store.UserStore) func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {
@@ -109,6 +114,7 @@ func handleUserCtx(s store.UserStore) func(http.Handler) http.Handler {
 	}
 }
 
+// GET /user/{id}/holdings
 func handleHoldingsRoute(svc *service.CustodianSvc) http.HandlerFunc {
 	return func(rw http.ResponseWriter, r *http.Request) {
 		user := r.Context().Value(USERCONTEXT).(*model.User)
@@ -127,6 +133,85 @@ func handleHoldingsRoute(svc *service.CustodianSvc) http.HandlerFunc {
 		rw.Header().Add("content-type", "application/json")
 		encoder := json.NewEncoder(rw)
 		encoder.Encode(holdings)
+	}
+}
+
+// GET /user/{id}/custodian/{custId}/transactions?type=[0-3]&aggregate
+func handleTransactionsRoute(svc *service.CustodianSvc) http.HandlerFunc {
+	return func(rw http.ResponseWriter, r *http.Request) {
+		user := r.Context().Value(USERCONTEXT).(*model.User)
+
+		// we'll use a 30s timeout to fetch the data
+		ctx, cancel := context.WithTimeout(r.Context(), 30*time.Second)
+		defer cancel()
+
+		scustId := chi.URLParam(r, "custId")
+		custId, err := strconv.Atoi(scustId)
+		if err != nil {
+			http.Error(rw, "invalid custId in GET /user/{id}/custodian/{custId}/transactions?type=[0-3]", http.StatusBadRequest)
+			return
+		}
+
+		// check this user has access to this custodian
+		found := false
+		for _, each := range user.Custodians {
+			if each == int32(custId) {
+				found = true
+			}
+		}
+		if !found {
+			http.Error(rw, "invalid custodian ID", http.StatusUnauthorized)
+			return
+		}
+
+		custodians, err := svc.FetchFromCustodian(ctx, int32(custId))
+		if err != nil {
+			http.Error(rw, "custodian error", http.StatusInternalServerError)
+			return
+		}
+		if len(custodians) != 1 {
+			http.Error(rw, "custodian count error", http.StatusInternalServerError)
+			return
+		}
+		custodian := custodians[0]
+
+		var txl []*model.Transaction
+		if t, hasType := r.URL.Query()["type"]; hasType {
+			txtype, err := strconv.Atoi(t[0])
+			if err != nil {
+				http.Error(rw, "invalid tx type", http.StatusBadRequest)
+				return
+			}
+			txl = custodian.FilterTransactionsByType(model.TransactionType(txtype))
+		} else {
+			txl = custodian.Transactions
+		}
+
+		rw.Header().Add("content-type", "application/json")
+		encoder := json.NewEncoder(rw)
+
+		// If we have the summary variable on the url, provide the asset list summary
+		if _, hasSummary := r.URL.Query()["summary"]; hasSummary {
+			al := model.NewAssetList()
+			for _, tx := range txl {
+				al.AddTransaction(tx)
+			}
+			encoder.Encode(al.GetAssets())
+		} else { // otherwise provide the transactions only
+			encoder.Encode(txl)
+		}
+	}
+}
+
+// GET /user/{id}
+func handleUserRoute() http.HandlerFunc {
+	return func(rw http.ResponseWriter, r *http.Request) {
+		user := r.Context().Value(USERCONTEXT).(*model.User)
+
+		// we'll use a 30s timeout to fetch the data
+		rw.Header().Add("content-type", "application/json")
+		encoder := json.NewEncoder(rw)
+		encoder.Encode(user)
 	}
 }
 

@@ -7,8 +7,19 @@ services:
     command:
       - /usr/local/bin/generator 
       - data
-      - --timer=10
+      - --timer=0 # Use 0 when testing
     volumes:
       - ./data:/app/data
     ports:
       - "9999:9999"
+
+  tracker:
+    build:
+      context: .
+    command:
+      - /usr/local/bin/generator 
+      - track
+      - --custodian
+      - http://generator:9999/custodian/
+    ports:
+      - "9998:9998"
