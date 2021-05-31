@@ -19,6 +19,10 @@ jobs:
       - name: Build binary to make sure it works
         run: go build
         working-directory: ./src
+      - name: Run the services in docker-compose stack
+        run: docker compose -f docker-compose.yml up -d
+      - name: Check running containers
+        run: docker-compose -f docker-compose.yml ps
       - name: Test
-        run: go test -count=1 ./model ./store 
+        run: go test -count=1
         working-directory: ./src
