@@ -20,5 +20,5 @@ jobs:
         run: go build
         working-directory: ./src
       - name: Test
-        run: go test ./...
+        run: go test -count=1 ./model ./store 
         working-directory: ./src
