@@ -137,3 +137,7 @@ ok      github.com/bottlepay/portfolio-data/model       0.456s
 ok      github.com/bottlepay/portfolio-data/service     1.056s
 ok      github.com/bottlepay/portfolio-data/store       0.460s
 ```
+
+## One more thing
+
+I've added a Github actions pipeline to build and test the services: https://github.com/chrisDeFouRire/bottlepay_gotest/actions to see the runs. I'm afraid the commits show I don't really enjoy tweaking CI pipelines because of the tedious commit-push-test-rince-repeat workflow :-)
